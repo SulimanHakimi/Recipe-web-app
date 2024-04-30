@@ -11,7 +11,6 @@ function App() {
         <Routes>
           <Route>
             <Route path="/" element={<Home />} />
-            <Route path="/:id" element={<RightMainContent />} />
             <Route path="/*" element={<NotFound />} />
           </Route>
         </Routes>
