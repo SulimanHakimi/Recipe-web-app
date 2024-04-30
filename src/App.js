@@ -1,7 +1,8 @@
-import React from 'react'
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from './components/home';
-import NotFound from './components/404';
+import Home from "./components/home";
+import NotFound from "./components/404";
+import RightMainContent from "./components/rightMainContent";
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
         <Routes>
           <Route>
             <Route path="/" element={<Home />} />
-            <Route path='/*' element={<NotFound/>}/>
+            <Route path="/:id" element={<RightMainContent />} />
+            <Route path="/*" element={<NotFound />} />
           </Route>
         </Routes>
       </BrowserRouter>

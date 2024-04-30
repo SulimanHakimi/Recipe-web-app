@@ -10,16 +10,16 @@ function Nav() {
   
 
   return (
-    <div className="w-full h-20 dark:bg-[#222831] shadow-md flex justify-between px-2 lg:px-10 py-2 items-center">
-      <div className="flex">
+    <div className="w-full h-20 dark:bg-[#222831] shadow-md flex justify-between lg:px-10 py-2 items-center">
+      <div className="flex items-center">
         <img
-          className="w-28 h-16 bg"
+          className="lg:w-28 lg:h-16 w-20 h-10"
           src="https://cdn.worldvectorlogo.com/logos/food-2.svg"
           alt=""
         />
         <div className="flex dark:text-white flex-col gap-2">
-          <span className="text-2xl font-medium">Kabul Food</span>
-          <p className="text-sm">Hundreds of flavors under on roof...</p>
+          <span className="lg:text-2xl text-lg font-medium">Kabul Food</span>
+          <p className="lg:text-sm text-xs">Hundreds of flavors under on roof...</p>
         </div>
       </div>
 

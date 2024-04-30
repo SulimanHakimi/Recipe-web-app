@@ -1,16 +1,19 @@
 import Card from "./card";
 import RightMainContent from "./rightMainContent";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
 function Main() {
   const [mealData, setData] = useState();
+  const [sned, setSend] = useState();
   const [inpValue, setInpValue] = useState("");
-
   function searchVal(e) {
     setInpValue(e.target.value);
   }
+useEffect(()=>{
+
+},[])
   function searchClick() {
     axios
       .get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inpValue}`)
@@ -39,7 +42,7 @@ function Main() {
         </div>
         <div className="cards gap-5 content-start md:content-center grid-cols-2 grid md:grid-cols-3 lg:grid-cols-3 py-5 px-4">
           {mealData?.meals?.map((item) => (
-            <Link to={`/${item.idMeal}`}>
+            <Link onClick={setSend(item)} to={`/${item.idMeal}`}>
               <Card
                 key={item.idMeal}
                 name={item.strMeal}
@@ -51,7 +54,7 @@ function Main() {
           ))}
         </div>
       </div>
-      <RightMainContent data={mealData} />
+      <RightMainContent data={sned} />
     </div>
   );
 }

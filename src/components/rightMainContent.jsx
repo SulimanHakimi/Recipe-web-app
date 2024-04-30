@@ -1,6 +1,7 @@
 import React from "react";
 
 function RightMainContent(data) {
+  console.log(data)
   return (
     <div className="right-side w-full justify-start gap-5 lg:w-1/2 p-4 min-h-screen dark:bg-[#222831] dark:text-white flex flex-col lg:justify-between lg:gap-2 self-start items-start">
       <video className="w-full rounded h-60" controls autoPlay>
