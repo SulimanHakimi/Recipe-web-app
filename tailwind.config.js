@@ -1,23 +1,20 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "light": "url('https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
+        "dark": "url('https://c0.wallpaperflare.com/preview/184/811/591/blur-bread-rolls-counter-cup.jpg')",
+      },
+    },
     screens: {
-      sm: "640px",
-      // => @media (min-width: 640px) { ... }
-
-      md: "768px",
-      // => @media (min-width: 768px) { ... }
-
-      lg: "1024px",
-      // => @media (min-width: 1024px) { ... }
-
+      sm: "560px",
+      md: "670px",
+      lg: "924px",
       xl: "1280px",
-      // => @media (min-width: 1280px) { ... }
-
       "2xl": "1536px",
-      // => @media (min-width: 1536px) { ... }
     },
   },
   plugins: [],

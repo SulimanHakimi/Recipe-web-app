@@ -1,0 +1,14 @@
+.card:hover{
+    .content {
+        display: flex;
+    }
+}
+.card {
+    display: grid;
+
+    transition: width 1s, height 2s, transform 2s;
+  }
+  
+  .card:hover {
+    transform: scale(105%);
+  }
